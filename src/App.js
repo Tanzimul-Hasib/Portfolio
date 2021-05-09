@@ -13,7 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { Redirect, Route, Switch as Switching } from "react-router";
 import Switch from "@material-ui/core/Switch";
 import { IconButton } from "@material-ui/core";
-import Navigation from "react-sticky-nav";
+// import Navigation from "react-sticky-nav";
 // import useOnClickOutside from "./Components/use-onclick-outside";
 
 function App() {
@@ -41,9 +41,6 @@ function App() {
       setChecked(true);
     }
   };
-  const styles = css`
-    position: -webkit-sticky; /* This is needed for Safari support */
-  `;
 
   return (
     <div className="App">
@@ -51,7 +48,7 @@ function App() {
       {/* ref={ref}  */}
 
       <div className="ham-burger-menu">
-        <Navigation></Navigation>
+        {/* <Navigation></Navigation> */}
         <IconButton onClick={() => setNavToggle(!navToggle)}>
           <MenuIcon />
         </IconButton>
