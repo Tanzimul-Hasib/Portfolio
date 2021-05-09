@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import resume from "../img/resume.jpg";
+import Tanzimul_Hasib_Resume from "./resume.pdf";
+import { Link } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 
 function ImageSection() {
@@ -11,14 +13,14 @@ function ImageSection() {
       </div>
       <div className="right-content">
         <h4>
-          I am <span></span>
+          Full-Stack <span> Web-Coader</span>
         </h4>
-        <p className="paragraph">
+        {/* <p className="paragraph">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
           natus quas vero enim praesentium delectus est id fugiat ab libero
           adipisci recusandae at maxime veritatis! Lorem ipsum, dolor sit amet
           consectetur adipisicing elit. Excepturi, nesciunt.
-        </p>
+        </p> */}
         <div className="about-info">
           <div className="info-title">
             <p>Full Name</p>
@@ -29,15 +31,17 @@ function ImageSection() {
             <p>Location</p>
           </div>
           <div className="info">
-            <p>:Md Tanzimul Hasib</p>
+            <p>: Md Tanzimul Hasib</p>
             <p>: 25</p>
             <p>: Bangladeshi </p>
             <p>: Bangla, English </p>
             <p>: Web Design And Developement</p>
-            <p>: 51/A/1 West-Rajarbajar, Panthapath, Dhaka</p>
+            <p>: Dhaka, Bangladesh</p>
           </div>
         </div>
-        <PrimaryButton title={"Download Cv"} />
+        <Link to={Tanzimul_Hasib_Resume} target="_blank" download>
+          <PrimaryButton title={"Download CV"} />
+        </Link>
       </div>
     </ImageSectionStyled>
   );

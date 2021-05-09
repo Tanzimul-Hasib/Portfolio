@@ -1,14 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import myfile from "./myfile.pdf";
 
 function PrimaryButton({ title }) {
-  return (
-    <Link to={myfile} target="_blank" download>
-      <PrimaryButtonStyled>{title} </PrimaryButtonStyled>{" "}
-    </Link>
-  );
+  return <PrimaryButtonStyled>{title}</PrimaryButtonStyled>;
 }
 
 const PrimaryButtonStyled = styled.a`

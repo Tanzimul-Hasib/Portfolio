@@ -7,14 +7,40 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ContactItem from "../Components/ContactItem";
+// import emailJs from "emailjs-com";
+// import { useForm } from "react-hook-form";
+// import { Link } from "react-router-dom";
 
 function ContactPage() {
   const phone = <PhoneIcon />;
   const email = <EmailIcon />;
   const location = <LocationOnIcon />;
+  // const { register, hasndleSubmit } = useForm();
+  // const onSubmit = (e) => alert(JSON.stringify(e));
+
+  // function sendmail(e) {
+  //   e.preventDefault();
+
+  //   emailJs
+  //     .sendForm(
+  //       "gmail",
+  //       "template_qfo6jor",
+  //       e.target,
+  //       "user_FmmAWo0ostLeeilgH5LWN"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   e.target.reset();
+  // }
   return (
     <MainLayout id="contact">
-      <Title title={"Contact"} span={"Contact"} />
+      <Title title={"Contact"} />
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
           <div className="left-content">
@@ -24,26 +50,38 @@ function ContactPage() {
             <form className="form">
               <div className="form-field">
                 <label htmlFor="name">Enter your name*</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" name="name" placeholder="name" />
               </div>
               <div className="form-field">
                 <label htmlFor="email">Enter your email*</label>
-                <input type="email" id="email" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email"
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="subject">Enter your subject</label>
-                <input type="text" id="subject" />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="subject"
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="text-area">Enter your Message*</label>
                 <textarea
-                  name="textarea"
+                  placeholder="message here"
+                  name="message"
                   id="textarea"
                   cols="30"
                   rows="10"
                 ></textarea>
               </div>
               <div className="form-field f-button">
+                {/* <input type="submit" value="Submit" /> */}
                 <PrimaryButton title={"Send Email"} />
               </div>
             </form>
@@ -52,19 +90,19 @@ function ContactPage() {
             <ContactItem
               title={"Phone"}
               icon={phone}
-              cont1={"+66-789675637"}
-              cont2={"07663520283"}
+              cont1={"+8801773124754"}
+              // cont2={"07663520283"}
             />
             <ContactItem
               title={"Email"}
               icon={email}
-              cont1={"loremipsum@gmail.com"}
-              cont2={"info.lorem.ipsum@gmail.com"}
+              cont1={"tanzimul.hasib@gmail.com"}
+              // cont2={"tanzimul15-9895@diu.edu.bd"}
             />
             <ContactItem
               title={"Address"}
               icon={location}
-              cont1={"27 Aldrich Road, London, England"}
+              cont1={"51/A/1 west Rajarbajar, Panthapath,Dhaka"}
               cont2={"United Kingdom"}
             />
           </div>

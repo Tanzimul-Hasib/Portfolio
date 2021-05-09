@@ -14,7 +14,7 @@ function HomePage() {
       </div>
       <div className="typography">
         <h1>
-          Hi, I'm <span>Tanzimul Hasib</span>
+          Hi, I'm <span>Hasib</span>
         </h1>
         <p>
           Profissional Full-Stack web developer. Willing to help implementing
